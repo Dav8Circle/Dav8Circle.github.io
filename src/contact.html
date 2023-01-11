@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-	<head>
-		<meta charset="UTF-8">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="/dist/output.css" rel="stylesheet">
 		<title>David Whyatt | Contact</title>
-	</head>
-	<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 	<style>
 		body {
 			background: url("websitebackground.JPG");
@@ -14,55 +13,121 @@
 			font-family: Andale Mono, Arial, Helvetica, sans-serif;
 		}
 	</style>
-	<body>
-		<h1 class="container mx-auto px-1 text-5xl font-bold hover:text-purple-800"><a href="index.html">
-			David Whyatt
-		</a></h1>
-		<h1 div class="container mx-auto px-28 py-2 font-light">
-			Saxophonist
-		</h1>	
-	</body>
-	<form class="w-full max-w-lg bg-gray-200 rounded-lg px-6 py-6 bg-opacity-80 absolute left-1/3" id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-php.php">
-    <div class="flex flex-wrap -mx-3 mb-6">
-      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-          First Name
-        </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Rick">
-        <p class="text-red-500 text-xs italic">Please fill out this field.</p>
-      </div>
-      <div class="w-full md:w-1/2 px-3">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-          Last Name
-        </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Astley">
+    <title>Contact</title>
+  </head>
+  <body>
+    <h1 class="container mx-auto px-1 text-5xl font-bold hover:text-purple-800"><a href="index.html">
+        David Whyatt
+    </a></h1>
+    <h1 div class="container mx-auto px-28 py-2 font-light">
+        Saxophonist
+    </h1>	
+    <div class="container">
+      <div class="row">
+        <div class="col align-self-center">
+          <!-- contact form -->
+          <form id="myForm" class="w-full max-w-lg bg-gray-200 rounded-lg px-6 py-6 bg-opacity-80 absolute left-1/3">
+            <!-- name --> 
+            <div class="form-group block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+              <label for="name">Name</label>
+              <input
+                type="name"
+                name="name"
+                class="form-control appearance-none block w-full bg-gray-200 text-gray-700  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white "
+                id="name"
+                placeholder="enter your name"
+              />
+            </div>
+
+            <!-- email -->
+            <div class="form-group block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                name="email"
+                class="form-control appearance-none block w-full bg-gray-200 text-gray-700  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  "
+                id="email"
+                placeholder="enter your email"
+              />
+            </div>
+
+            <!-- subject -->
+            <div class="form-group block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                name="subject"
+                class="form-control appearance-none block w-full bg-gray-200 text-gray-700  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  "
+                id="subject"
+                placeholder="enter email subject"
+              />
+            </div>
+
+            <div class="form-group block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+              <label for="message">Message</label>
+              <textarea class="form-control appearance-none block w-full bg-gray-200 text-gray-700  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white " id="message" name="message" rows="5" placeholder="please enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary shadow bg-purple-500 hover:bg-violet-400 hover:scale-105 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
-    <div class="flex flex-wrap -mx-3 mb-6">
-      <div class="w-full px-3">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-          E-mail
-        </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email">
-      
-      </div>
-    </div>
-    <div class="flex flex-wrap -mx-3 mb-6">
-      <div class="w-full px-3">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-          Message
-        </label>
-        <textarea class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message"></textarea>
-        <!-- https://paperform.co/blog/html-contact-form/ to continue working-->
-      </div>
-    </div>
-    <div class="md:flex md:items-center">
-      <div class="md:w-1/3">
-        <button class="shadow bg-purple-500 hover:bg-violet-400 hover:scale-105 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
-          Send
-        </button>
-      </div>
-      <div class="md:w-2/3"></div>
-    </div>
-</form>
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+    <script>
+        function onSubmit(token) {
+          document.getElementById("demo-form").submit();
+        }
+      </script>
+
+    <!-- bootstrap js -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">      (function () {
+        emailjs.init("GD-4OdQ518wPh5-6b");
+      })();
+    </script>
+
+
+    <script>
+        // listen to the form submission
+        document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const serviceID = "service_ffcnon3";
+            const templateID = "contact_form";
+
+            // send the email here
+            emailjs.sendForm(serviceID, templateID, this).then(
+            (response) => {
+                console.log("Message sent!", response.status, response.text);
+                alert("Message sent!");
+            },
+            (error) => {
+                console.log("Failed to send message, please try again later.", error);
+                alert("Failed to send message, please try again later.", error);
+            }
+            );
+        });
+    </script>
+        
+
+</body>
 </html>
